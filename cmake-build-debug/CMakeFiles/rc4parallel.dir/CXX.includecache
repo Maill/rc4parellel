@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/olivier/CLionProjects/rc4parallel/src/RC4.h
+string.h
+-
+stdio.h
+-
+stdlib.h
+-
+iostream
+-
+
+/home/olivier/CLionProjects/rc4parallel/src/main.cpp
+iostream
+-
+vector
+-
+RC4.h
+/home/olivier/CLionProjects/rc4parallel/src/RC4.h
+algorithm
+-
+fstream
+-
+queue
+-
+thread
+-
+mutex
+-
+condition_variable
+-
+functional
+-
+sstream
+-
+cassert
+-
+map
+-
+

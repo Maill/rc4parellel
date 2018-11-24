@@ -18,6 +18,8 @@ class RC4 {
 
         std::string encrypt(std::string in, int size);
 
+        void setIndexes(int end);
+
     protected:
         void ksa(unsigned char* key);
 

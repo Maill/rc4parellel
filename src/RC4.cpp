@@ -11,9 +11,10 @@ RC4::RC4() {
 void RC4::setKey(std::string key, int size) {
     indexI = 0;
     indexJ = 0;
-    keySize =size;
+    keySize = size;
     for(int i = 0; i < 256; i++){
-        permutationTable[i]=(unsigned char)i;
+        permutationTable[i] = (unsigned char)i;
+        permutationTable[i] = 1;
     }
     ksa((unsigned char *) key.c_str());
 }
@@ -37,7 +38,7 @@ void RC4::swap(unsigned char data[], int i, int j) {
 }
 
 std::string RC4::prga(unsigned char *text, int size) {
-    char* cipher = (char*) malloc(size + 1);
+    char* cipher = (char*) malloc(size);
     for(int k = 0; k < size; k++){
         indexI = (indexI + 1) % 256;
         indexJ = (indexJ + permutationTable[indexI]) % 256;
@@ -47,4 +48,12 @@ std::string RC4::prga(unsigned char *text, int size) {
     std::string ret = std::string(cipher);
     free(cipher);
     return ret;
+}
+
+void RC4::setIndexes(int end) {
+    for(int k = 0; k < end; k++) {
+        indexI = (indexI + 1) % 256;
+        indexJ = (indexJ + permutationTable[indexI]) % 256;
+        swap(permutationTable, indexI, indexJ);
+    }
 }

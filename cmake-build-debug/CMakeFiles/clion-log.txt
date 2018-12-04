@@ -1,4 +1,11 @@
 /opt/clion-2018.2.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/olivier/CLionProjects/rc4parallel
+-- Failed to find LLVM FileCheck
+-- git Version: v1.4.0-19f7d5c2
+-- Version: 1.4.0
+-- Performing Test HAVE_STD_REGEX -- success
+-- Performing Test HAVE_GNU_POSIX_REGEX -- failed to compile
+-- Performing Test HAVE_POSIX_REGEX -- success
+-- Performing Test HAVE_STEADY_CLOCK -- success
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/olivier/CLionProjects/rc4parallel/cmake-build-debug

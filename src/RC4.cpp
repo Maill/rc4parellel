@@ -38,14 +38,14 @@ void RC4::swap(unsigned char data[], int i, int j) {
 }
 
 std::string RC4::prga(unsigned char *text, int size) {
-    char* cipher = (char*) malloc(size);
+    unsigned char* cipher = (unsigned char*) malloc(size);
     for(int k = 0; k < size; k++){
         indexI = (indexI + 1) % 256;
         indexJ = (indexJ + permutationTable[indexI]) % 256;
         swap(permutationTable, indexI, indexJ);
         cipher[k] = permutationTable[(permutationTable[indexI] + permutationTable[indexJ]) % 256] ^ text[k];
     }
-    std::string ret = std::string(cipher);
+    std::string ret = std::string(reinterpret_cast<char*>(cipher));
     free(cipher);
     return ret;
 }

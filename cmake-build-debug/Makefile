@@ -56,16 +56,62 @@ CMAKE_BINARY_DIR = /home/olivier/CLionProjects/rc4parallel/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/clion-2018.2.4/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/opt/clion-2018.2.4/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/opt/clion-2018.2.4/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
-.PHONY : rebuild_cache/fast
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/opt/clion-2018.2.4/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/opt/clion-2018.2.4/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/opt/clion-2018.2.4/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/opt/clion-2018.2.4/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/opt/clion-2018.2.4/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -77,6 +123,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/opt/clion-2018.2.4/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -122,6 +179,137 @@ rc4parallel: cmake_check_build_system
 rc4parallel/fast:
 	$(MAKE) -f CMakeFiles/rc4parallel.dir/build.make CMakeFiles/rc4parallel.dir/build
 .PHONY : rc4parallel/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) -f lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) -f lib/googletest/googlemock/CMakeFiles/gmock.dir/build.make lib/googletest/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/build.make lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named test_RC4
+
+# Build rule for target.
+test_RC4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_RC4
+.PHONY : test_RC4
+
+# fast build rule for target.
+test_RC4/fast:
+	$(MAKE) -f test/CMakeFiles/test_RC4.dir/build.make test/CMakeFiles/test_RC4.dir/build
+.PHONY : test_RC4/fast
+
+#=============================================================================
+# Target rules for targets named benchmark
+
+# Build rule for target.
+benchmark: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 benchmark
+.PHONY : benchmark
+
+# fast build rule for target.
+benchmark/fast:
+	$(MAKE) -f lib/benchmark/src/CMakeFiles/benchmark.dir/build.make lib/benchmark/src/CMakeFiles/benchmark.dir/build
+.PHONY : benchmark/fast
+
+#=============================================================================
+# Target rules for targets named benchmark_main
+
+# Build rule for target.
+benchmark_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 benchmark_main
+.PHONY : benchmark_main
+
+# fast build rule for target.
+benchmark_main/fast:
+	$(MAKE) -f lib/benchmark/src/CMakeFiles/benchmark_main.dir/build.make lib/benchmark/src/CMakeFiles/benchmark_main.dir/build
+.PHONY : benchmark_main/fast
+
+#=============================================================================
+# Target rules for targets named bench_RC4
+
+# Build rule for target.
+bench_RC4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bench_RC4
+.PHONY : bench_RC4
+
+# fast build rule for target.
+bench_RC4/fast:
+	$(MAKE) -f benchmark/CMakeFiles/bench_RC4.dir/build.make benchmark/CMakeFiles/bench_RC4.dir/build
+.PHONY : bench_RC4/fast
+
+src/Functions.o: src/Functions.cpp.o
+
+.PHONY : src/Functions.o
+
+# target to build an object file
+src/Functions.cpp.o:
+	$(MAKE) -f CMakeFiles/rc4parallel.dir/build.make CMakeFiles/rc4parallel.dir/src/Functions.cpp.o
+.PHONY : src/Functions.cpp.o
+
+src/Functions.i: src/Functions.cpp.i
+
+.PHONY : src/Functions.i
+
+# target to preprocess a source file
+src/Functions.cpp.i:
+	$(MAKE) -f CMakeFiles/rc4parallel.dir/build.make CMakeFiles/rc4parallel.dir/src/Functions.cpp.i
+.PHONY : src/Functions.cpp.i
+
+src/Functions.s: src/Functions.cpp.s
+
+.PHONY : src/Functions.s
+
+# target to generate assembly for a file
+src/Functions.cpp.s:
+	$(MAKE) -f CMakeFiles/rc4parallel.dir/build.make CMakeFiles/rc4parallel.dir/src/Functions.cpp.s
+.PHONY : src/Functions.cpp.s
 
 src/RC4.o: src/RC4.cpp.o
 
@@ -177,21 +365,67 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/rc4parallel.dir/build.make CMakeFiles/rc4parallel.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+test/MD5.o: test/MD5.cpp.o
+
+.PHONY : test/MD5.o
+
+# target to build an object file
+test/MD5.cpp.o:
+	$(MAKE) -f CMakeFiles/rc4parallel.dir/build.make CMakeFiles/rc4parallel.dir/test/MD5.cpp.o
+.PHONY : test/MD5.cpp.o
+
+test/MD5.i: test/MD5.cpp.i
+
+.PHONY : test/MD5.i
+
+# target to preprocess a source file
+test/MD5.cpp.i:
+	$(MAKE) -f CMakeFiles/rc4parallel.dir/build.make CMakeFiles/rc4parallel.dir/test/MD5.cpp.i
+.PHONY : test/MD5.cpp.i
+
+test/MD5.s: test/MD5.cpp.s
+
+.PHONY : test/MD5.s
+
+# target to generate assembly for a file
+test/MD5.cpp.s:
+	$(MAKE) -f CMakeFiles/rc4parallel.dir/build.make CMakeFiles/rc4parallel.dir/test/MD5.cpp.s
+.PHONY : test/MD5.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rc4parallel"
+	@echo "... test"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... gmock_main"
+	@echo "... gmock"
+	@echo "... gtest"
+	@echo "... gtest_main"
+	@echo "... test_RC4"
+	@echo "... benchmark"
+	@echo "... benchmark_main"
+	@echo "... bench_RC4"
+	@echo "... src/Functions.o"
+	@echo "... src/Functions.i"
+	@echo "... src/Functions.s"
 	@echo "... src/RC4.o"
 	@echo "... src/RC4.i"
 	@echo "... src/RC4.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... test/MD5.o"
+	@echo "... test/MD5.i"
+	@echo "... test/MD5.s"
 .PHONY : help
 
 

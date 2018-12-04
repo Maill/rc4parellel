@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/rc4parallel.dir/src/main.cpp.o"
+  "CMakeFiles/rc4parallel.dir/src/Functions.cpp.o"
   "CMakeFiles/rc4parallel.dir/src/RC4.cpp.o"
+  "CMakeFiles/rc4parallel.dir/test/MD5.cpp.o"
   "rc4parallel.pdb"
   "rc4parallel"
 )

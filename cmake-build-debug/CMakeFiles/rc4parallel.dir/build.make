@@ -70,9 +70,22 @@ CMakeFiles/rc4parallel.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rc4parallel.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/olivier/CLionProjects/rc4parallel/src/main.cpp -o CMakeFiles/rc4parallel.dir/src/main.cpp.s
 
+CMakeFiles/rc4parallel.dir/src/Functions.cpp.o: CMakeFiles/rc4parallel.dir/flags.make
+CMakeFiles/rc4parallel.dir/src/Functions.cpp.o: ../src/Functions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/olivier/CLionProjects/rc4parallel/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rc4parallel.dir/src/Functions.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rc4parallel.dir/src/Functions.cpp.o -c /home/olivier/CLionProjects/rc4parallel/src/Functions.cpp
+
+CMakeFiles/rc4parallel.dir/src/Functions.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rc4parallel.dir/src/Functions.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/olivier/CLionProjects/rc4parallel/src/Functions.cpp > CMakeFiles/rc4parallel.dir/src/Functions.cpp.i
+
+CMakeFiles/rc4parallel.dir/src/Functions.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rc4parallel.dir/src/Functions.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/olivier/CLionProjects/rc4parallel/src/Functions.cpp -o CMakeFiles/rc4parallel.dir/src/Functions.cpp.s
+
 CMakeFiles/rc4parallel.dir/src/RC4.cpp.o: CMakeFiles/rc4parallel.dir/flags.make
 CMakeFiles/rc4parallel.dir/src/RC4.cpp.o: ../src/RC4.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/olivier/CLionProjects/rc4parallel/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rc4parallel.dir/src/RC4.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/olivier/CLionProjects/rc4parallel/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rc4parallel.dir/src/RC4.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rc4parallel.dir/src/RC4.cpp.o -c /home/olivier/CLionProjects/rc4parallel/src/RC4.cpp
 
 CMakeFiles/rc4parallel.dir/src/RC4.cpp.i: cmake_force
@@ -83,19 +96,36 @@ CMakeFiles/rc4parallel.dir/src/RC4.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rc4parallel.dir/src/RC4.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/olivier/CLionProjects/rc4parallel/src/RC4.cpp -o CMakeFiles/rc4parallel.dir/src/RC4.cpp.s
 
+CMakeFiles/rc4parallel.dir/test/MD5.cpp.o: CMakeFiles/rc4parallel.dir/flags.make
+CMakeFiles/rc4parallel.dir/test/MD5.cpp.o: ../test/MD5.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/olivier/CLionProjects/rc4parallel/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/rc4parallel.dir/test/MD5.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rc4parallel.dir/test/MD5.cpp.o -c /home/olivier/CLionProjects/rc4parallel/test/MD5.cpp
+
+CMakeFiles/rc4parallel.dir/test/MD5.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rc4parallel.dir/test/MD5.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/olivier/CLionProjects/rc4parallel/test/MD5.cpp > CMakeFiles/rc4parallel.dir/test/MD5.cpp.i
+
+CMakeFiles/rc4parallel.dir/test/MD5.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rc4parallel.dir/test/MD5.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/olivier/CLionProjects/rc4parallel/test/MD5.cpp -o CMakeFiles/rc4parallel.dir/test/MD5.cpp.s
+
 # Object files for target rc4parallel
 rc4parallel_OBJECTS = \
 "CMakeFiles/rc4parallel.dir/src/main.cpp.o" \
-"CMakeFiles/rc4parallel.dir/src/RC4.cpp.o"
+"CMakeFiles/rc4parallel.dir/src/Functions.cpp.o" \
+"CMakeFiles/rc4parallel.dir/src/RC4.cpp.o" \
+"CMakeFiles/rc4parallel.dir/test/MD5.cpp.o"
 
 # External object files for target rc4parallel
 rc4parallel_EXTERNAL_OBJECTS =
 
 rc4parallel: CMakeFiles/rc4parallel.dir/src/main.cpp.o
+rc4parallel: CMakeFiles/rc4parallel.dir/src/Functions.cpp.o
 rc4parallel: CMakeFiles/rc4parallel.dir/src/RC4.cpp.o
+rc4parallel: CMakeFiles/rc4parallel.dir/test/MD5.cpp.o
 rc4parallel: CMakeFiles/rc4parallel.dir/build.make
 rc4parallel: CMakeFiles/rc4parallel.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/olivier/CLionProjects/rc4parallel/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable rc4parallel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/olivier/CLionProjects/rc4parallel/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable rc4parallel"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rc4parallel.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

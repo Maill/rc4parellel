@@ -13,7 +13,7 @@ void RC4::setKey(std::string key, int size) {
     indexJ = 0;
     keySize = size;
     for(int i = 0; i < 256; i++){
-        permutationTable[i] = (unsigned char)i;
+        //permutationTable[i] = (unsigned char)i;
         permutationTable[i] = 1;
     }
     ksa((unsigned char *) key.c_str());

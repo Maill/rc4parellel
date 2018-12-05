@@ -11,9 +11,11 @@ map<int, string> Functions::launchWork(int nbThreads, const string &inputFile, c
 
     map<int, string> parts;
 
+    cout << "Avant : " << str.length() << endl;
+
     int h = 0;
-    for(int i = 0; i < (int)str.length(); i += (str.length()/nbThreads)) {
-        parts[h] = str.substr(static_cast<unsigned long>(i), (str.length() / nbThreads));
+    for(int i = 0; i < (int)str.length(); i += (str.length() % 1500)) {
+        parts[h] = str.substr(static_cast<unsigned long>(i), (str.length() % 1500));
         h++;
     }
 
@@ -22,22 +24,36 @@ map<int, string> Functions::launchWork(int nbThreads, const string &inputFile, c
 
     int indexesBounds = 0;
 
-    for(int j = 0; j < nbThreads; j++) {
-        RC4 rc4;
-        rc4.setKey(key, static_cast<int>(key.length()));
+    for(int j = 0; j < parts.size(); j=j+nbThreads) {
 
-        if(j != 0){
-            indexesBounds = static_cast<int>(indexesBounds + parts[j-1].length()-1);
-            rc4.setIndexes(indexesBounds);
+        for(int k = 0; k < nbThreads; k++) {
+            if(j+k >= parts.size())
+                break;
+
+            string part = parts[j+k];
+
+            RC4 rc4;
+            rc4.setKey(key, static_cast<int>(key.length()));
+
+            if(j != 0 || j+k > 0){
+                indexesBounds = static_cast<int>(indexesBounds + parts[j+k-1].length()-1);
+                rc4.setIndexes(indexesBounds);
+            }
+
+            threadFutures.emplace_back(async(&RC4::encrypt, rc4, part, part.length()));
         }
 
-        threadFutures.emplace_front(async(&RC4::encrypt, rc4, parts[j], parts[j].length()));
+        for(int l= 0; l < nbThreads; l++) {
+            if(j+l >= parts.size())
+                break;
+
+            threadFutures[l].wait();
+            parts[j+l] = threadFutures[l].get();
+        }
+
+        threadFutures.clear();
     }
 
-    for(int k = 0; k < nbThreads; k++) {
-        threadFutures[k].wait();
-        parts[k] = threadFutures[k].get();
-    }
 
     return parts;
 }

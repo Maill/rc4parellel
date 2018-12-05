@@ -29,7 +29,9 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    //Functions::writeIntoFile(parts, outputFile);
+    Functions::writeIntoFile(parts, outputFile);
+
+    cout << "Apres : " << Functions::getStringFromFile(outputFile).length() << endl;
 
     return 0;
 }

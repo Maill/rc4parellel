@@ -8,7 +8,7 @@ set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
 
 
-set(SOURCES_FILES src/main.cpp src/RC4.h src/Functions.h src/Functions.cpp src/RC4.cpp test/MD5.cpp test/MD5.h)
+set(SOURCES_FILES src/main.cpp src/RC4.h src/Functions.h src/Functions.cpp src/RC4.cpp)
 set(LIBRC4_SOURCES_FILES ${CMAKE_CURRENT_LIST_DIR}/src/RC4.h ${CMAKE_CURRENT_LIST_DIR}/src/Functions.h ${CMAKE_CURRENT_LIST_DIR}/src/Functions.cpp ${CMAKE_CURRENT_LIST_DIR}/src/RC4.cpp)
 
 

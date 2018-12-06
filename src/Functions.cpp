@@ -4,14 +4,6 @@
 
 #include "Functions.h"
 
-int getCount(map<int, string> parts){
-    int ret = 0;
-    for(int i = 0; i < parts.size(); i++){
-        ret += parts[i].length();
-    }
-    return ret;
-}
-
 map<int, pair<int, unsigned char*>> Functions::launchWork(int nbThreads, const string &inputFile, const string &key) {
     ifstream t(inputFile, ios::binary);
     string str((std::istreambuf_iterator<char>(t)),
@@ -26,7 +18,7 @@ map<int, pair<int, unsigned char*>> Functions::launchWork(int nbThreads, const s
     if(str.length() > 1000000)
         paq = 400000;
 
-    for(int i = 0; i < str.length() / paq; i++) {
+    for(int i = 0; i < (int)str.length() / paq; i++) {
         parts[partsIndex] = str.substr(fragmentationCount, paq);
         partsIndex++;
         fragmentationCount += paq;
@@ -40,10 +32,10 @@ map<int, pair<int, unsigned char*>> Functions::launchWork(int nbThreads, const s
 
     int indexesBounds = 0;
 
-    for(int j = 0; j < parts.size(); j=j+nbThreads) {
+    for(int j = 0; j < (int)parts.size(); j=j+nbThreads) {
 
         for(int k = 0; k < nbThreads; k++) {
-            if(j+k >= parts.size())
+            if(j+k >= (int)parts.size())
                 break;
 
             string part = parts[j+k];
@@ -60,7 +52,7 @@ map<int, pair<int, unsigned char*>> Functions::launchWork(int nbThreads, const s
         }
 
         for(int l= 0; l < nbThreads; l++) {
-            if(j+l >= parts.size())
+            if(j+l >= (int)parts.size())
                 break;
 
             threadFutures[l].wait();
@@ -74,6 +66,21 @@ map<int, pair<int, unsigned char*>> Functions::launchWork(int nbThreads, const s
 
     return partsToReturn;
 }
+
+map<int, pair<int, unsigned char*>> Functions::launchWorkSequential(const string &inputFile, const string &key) {
+    ifstream t(inputFile, ios::binary);
+    string str((std::istreambuf_iterator<char>(t)),
+               std::istreambuf_iterator<char>());
+
+    map<int, pair<int, unsigned char*>> partsToReturn;
+
+    RC4 rc4;
+    rc4.setKey(key, (int)key.size());
+    partsToReturn[0] = rc4.encrypt(str, (int)str.length());
+
+    return partsToReturn;
+}
+
 
 void Functions::writeIntoFile(map<int, pair<int, unsigned char*>> parts, const string &outputFile, int fileSize) {
     ofstream file(outputFile, fstream::in | fstream::out | fstream::trunc | ios::binary);

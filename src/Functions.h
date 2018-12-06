@@ -19,8 +19,8 @@
 using namespace std;
 
 namespace Functions {
-    map<int, string> launchWork(int nbThreads, const string &inputFile, const string &key);
-    void writeIntoFile(map<int, string> parts, const string &outputFile);
+    map<int, pair<int, unsigned char*>> launchWork(int nbThreads, const string &inputFile, const string &key);
+    void writeIntoFile(map<int, pair<int, unsigned char*>> parts, const string &outputFile, int fileSize);
     bool checkFileExtention(const string &str, const string &suffix);
     string getStringFromFile(string path);
 

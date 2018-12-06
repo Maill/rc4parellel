@@ -16,16 +16,16 @@ class RC4 {
 
         void setKey(std::string key, int size);
 
-        std::string encrypt(std::string in, int size);
+        std::pair<int, unsigned char*> encrypt(std::string in, int size);
 
         void setIndexes(int end);
 
     protected:
         void ksa(unsigned char* key);
 
-        void swap(unsigned char data[], int i, int j);
+        void swap(int i, int j);
 
-        std::string prga(unsigned char *text, int size);
+        std::pair<int, unsigned char*> prga(unsigned char *text, int size);
 
         unsigned char permutationTable[256];
 

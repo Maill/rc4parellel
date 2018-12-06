@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
     string outputFile = argv[4];
     string key = argv[5];
 
-    map<int, string> parts = Functions::launchWork(nbThreads, inputFile, key);
+    map<int, pair<int, unsigned char*>> parts = Functions::launchWork(nbThreads, inputFile, key);
 
     if(method == "-e"){
         if(!Functions::checkFileExtention(outputFile, ".rc4")) {
@@ -29,9 +29,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    Functions::writeIntoFile(parts, outputFile);
-
-    cout << "Apres : " << Functions::getStringFromFile(outputFile).length() << endl;
-
+    Functions::writeIntoFile(parts, outputFile, (int)Functions::getStringFromFile(inputFile).length());
+    
     return 0;
 }

@@ -16,8 +16,8 @@ TEST(RC4, encryptTextFromShortFile) {
     string pathOutput = "../data/2_input";
     int nbThread = 3;
     //RC4 work
-    map<int, string> parts = launchWork(nbThread, pathInput, key);
-    writeIntoFile(parts, pathOutput);
+    map<int, pair<int, unsigned char*>> parts = launchWork(nbThread, pathInput, key);
+    writeIntoFile(parts, pathOutput, getStringFromFile(pathInput).length());
     string md5Input = MD5(getStringFromFile(pathInput)).hexdigest();
     string md5Output = MD5(getStringFromFile(pathOutput)).hexdigest();
     //Assert
@@ -31,8 +31,8 @@ TEST(RC4, decryptTextFromShortFile) {
     string pathOutput = "../data/2_output";
     int nbThread = 3;
     //RC4 work
-    map<int, string> parts = launchWork(nbThread, pathInput, key);
-    writeIntoFile(parts, pathOutput);
+    map<int, pair<int, unsigned char*>> parts = launchWork(nbThread, pathInput, key);
+    writeIntoFile(parts, pathOutput, getStringFromFile(pathInput).length());
     //Prepare Assert
     string fileToCompare = "../data/1_input";
     string md5Input = MD5(getStringFromFile(fileToCompare)).hexdigest();
@@ -48,8 +48,8 @@ TEST(RC4, encryptTextFromBigFile) {
     string pathOutput = "../data/4_input";
     int nbThread = 3;
     //RC4 work
-    map<int, string> parts = launchWork(nbThread, pathInput, key);
-    writeIntoFile(parts, pathOutput);
+    map<int, pair<int, unsigned char*>> parts = launchWork(nbThread, pathInput, key);
+    writeIntoFile(parts, pathOutput, getStringFromFile(pathInput).length());
     //Prepare Assert
     string md5Input = MD5(getStringFromFile(pathInput)).hexdigest();
     string md5Output = MD5(getStringFromFile(pathOutput)).hexdigest();
@@ -64,8 +64,8 @@ TEST(RC4, decryptTextFromBigFile) {
     string pathOutput = "../data/4_output";
     int nbThread = 3;
     //RC4 work
-    map<int, string> parts = launchWork(nbThread, pathInput, key);
-    writeIntoFile(parts, pathOutput);
+    map<int, pair<int, unsigned char*>> parts = launchWork(nbThread, pathInput, key);
+    writeIntoFile(parts, pathOutput, getStringFromFile(pathInput).length());
     //Prepare Assert
     string fileToCompare = "../data/3_input";
     string md5Input = MD5(getStringFromFile(fileToCompare)).hexdigest();
@@ -81,8 +81,8 @@ TEST(RC4, encryptBigPictureFile) {
     string pathOutput = "../data/6_input";
     int nbThread = 3;
     //RC4 work
-    map<int, string> parts = launchWork(nbThread, pathInput, key);
-    writeIntoFile(parts, pathOutput);
+    map<int, pair<int, unsigned char*>> parts = launchWork(nbThread, pathInput, key);
+    writeIntoFile(parts, pathOutput, getStringFromFile(pathInput).length());
     string md5Input = MD5(getStringFromFile(pathInput)).hexdigest();
     string md5Output = MD5(getStringFromFile(pathOutput)).hexdigest();
     //Assert
@@ -96,8 +96,8 @@ TEST(RC4, decryptBigPictureFile) {
     string pathOutput = "../data/6_output.jpg";
     int nbThread = 3;
     //RC4 work
-    map<int, string> parts = launchWork(nbThread, pathInput, key);
-    writeIntoFile(parts, pathOutput);
+    map<int, pair<int, unsigned char*>> parts = launchWork(nbThread, pathInput, key);
+    writeIntoFile(parts, pathOutput, getStringFromFile(pathInput).length());
     //Prepare Assert
     string fileToCompare = "../data/5_input.jpg";
     string md5Input = MD5(getStringFromFile(fileToCompare)).hexdigest();

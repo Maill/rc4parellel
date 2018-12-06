@@ -4,23 +4,39 @@
 
 #include "Functions.h"
 
-map<int, string> Functions::launchWork(int nbThreads, const string &inputFile, const string &key) {
+int getCount(map<int, string> parts){
+    int ret = 0;
+    for(int i = 0; i < parts.size(); i++){
+        ret += parts[i].length();
+    }
+    return ret;
+}
+
+map<int, pair<int, unsigned char*>> Functions::launchWork(int nbThreads, const string &inputFile, const string &key) {
     ifstream t(inputFile, ios::binary);
     string str((std::istreambuf_iterator<char>(t)),
                std::istreambuf_iterator<char>());
 
     map<int, string> parts;
+    map<int, pair<int, unsigned char*>> partsToReturn;
+    
+    int partsIndex = 0;
+    int fragmentationCount = 0;
+    int paq = 20000;
+    if(str.length() > 1000000)
+        paq = 400000;
 
-    cout << "Avant : " << str.length() << endl;
-
-    int h = 0;
-    for(int i = 0; i < (int)str.length(); i += (str.length() % 1500)) {
-        parts[h] = str.substr(static_cast<unsigned long>(i), (str.length() % 1500));
-        h++;
+    for(int i = 0; i < str.length() / paq; i++) {
+        parts[partsIndex] = str.substr(fragmentationCount, paq);
+        partsIndex++;
+        fragmentationCount += paq;
+    }
+    if(str.length() % paq != 0){
+        parts[partsIndex] = str.substr(fragmentationCount, (str.length() % paq));
     }
 
     deque<thread> threads;
-    deque<future<string>> threadFutures;
+    deque<future<pair<int, unsigned char*>>> threadFutures;
 
     int indexesBounds = 0;
 
@@ -48,21 +64,31 @@ map<int, string> Functions::launchWork(int nbThreads, const string &inputFile, c
                 break;
 
             threadFutures[l].wait();
-            parts[j+l] = threadFutures[l].get();
+            partsToReturn[j+l] = threadFutures[l].get();
         }
 
         threadFutures.clear();
     }
 
+    parts.clear();
 
-    return parts;
+    return partsToReturn;
 }
 
-void Functions::writeIntoFile(map<int, string> parts, const string &outputFile) {
+void Functions::writeIntoFile(map<int, pair<int, unsigned char*>> parts, const string &outputFile, int fileSize) {
     ofstream file(outputFile, fstream::in | fstream::out | fstream::trunc | ios::binary);
 
     for(int i = 0; i < (int)parts.size(); i++) {
-        file << parts[i];
+        fileSize -= parts[i].first;
+        if(fileSize < 0){
+            for(int j = 0; j < parts[i].first + fileSize; j++){
+                file << parts[i].second[j];
+            }
+        } else {
+            for(int j = 0; j < parts[i].first; j++){
+                file << parts[i].second[j];
+            }
+        }
     }
 
     file.close();

@@ -38,13 +38,6 @@ void ThreadManager::startWork() {
     baseRC4 = RC4();
     baseRC4.setKey(key, key.size());
 
-    /*while (!fileAccessor->noDataToRead()){
-        for(int i = 0; i < threadNumber; i++){
-            listThreads->emplace_back(thread(&ThreadManager::threadWork, this));
-        }
-        waitThreads();
-        listThreads->clear();
-    }*/
     for(int i = 0; i < threadNumber; i++){
         listThreads->emplace_back(thread(&ThreadManager::threadWork, this));
     }

@@ -19,7 +19,7 @@
 FileAccessor::FileAccessor(const string &pathInputFile, const string &pathOutputFile) {
     //Init file accessors
     this->inputFile = ifstream(pathInputFile, ios::binary | ios::ate);
-    this->outputFile = ofstream(pathOutputFile, fstream::in | fstream::out | fstream::trunc | ios::binary);
+    this->outputFile = ofstream(pathOutputFile, ios::binary);
 
     //Init variables
     this->inputFileLength = static_cast<int>(this->inputFile.tellg());

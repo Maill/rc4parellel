@@ -35,29 +35,39 @@ ThreadManager::~ThreadManager() {
  * Start the RC4 encryption/decryption work
  */
 void ThreadManager::startWork() {
-    while (!fileAccessor->noDataToRead()){
+    baseRC4 = RC4();
+    baseRC4.setKey(key, key.size());
+
+    /*while (!fileAccessor->noDataToRead()){
         for(int i = 0; i < threadNumber; i++){
             listThreads->emplace_back(thread(&ThreadManager::threadWork, this));
         }
         waitThreads();
         listThreads->clear();
+    }*/
+    for(int i = 0; i < threadNumber; i++){
+        listThreads->emplace_back(thread(&ThreadManager::threadWork, this));
     }
+    waitThreads();
 }
 
 /**
  * Method for thread to handle the work
  */
 void ThreadManager::threadWork() {
-    pair<int, vector<unsigned char>> chunk = fileAccessor->getNextChunk();
+    while (!fileAccessor->noDataToRead()){
+        pair<int, vector<unsigned char>> chunk = fileAccessor->getNextChunk();
 
-    if(chunk.second.empty())
-        return;
+        if(chunk.second.empty())
+            return;
 
-    RC4 rc4;
-    rc4.setKey(key, key.size());
-    rc4.execute(&chunk);
+        RC4 rc4;
+        rc4 = baseRC4;
+        rc4.execute(&chunk);
 
-    fileAccessor->writeChunk(chunk);
+        fileAccessor->writeChunk(chunk);
+    }
+
 }
 
 /**

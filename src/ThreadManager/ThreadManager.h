@@ -68,6 +68,11 @@ class ThreadManager {
          * Number of thread to use
          */
         int threadNumber;
+
+        /**
+         * RC4 object to be copied for the threads (Avoid initializing each time)
+         */
+        RC4 baseRC4;
 };
 
 

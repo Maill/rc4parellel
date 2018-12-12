@@ -26,7 +26,7 @@
 using namespace std;
 
 namespace {
-    int const SIZECHUNK = 2000;
+    int const SIZECHUNK = 4000;
 };
 
 #endif //RC4PARALLEL_INCLUDES_H

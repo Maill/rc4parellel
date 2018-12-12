@@ -6,17 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/nicolas/Documents/rc4parellel/src/Functions.cpp
-Functions.h
-/home/nicolas/Documents/rc4parellel/src/Functions.h
-
-/home/nicolas/Documents/rc4parellel/src/Functions.h
+/home/olivier/CLionProjects/rc4parellel/src/Common/Includes.h
 iostream
 -
-vector
--
-RC4.h
-/home/nicolas/Documents/rc4parellel/src/RC4.h
 queue
 -
 thread
@@ -31,24 +23,18 @@ map
 -
 future
 -
-
-/home/nicolas/Documents/rc4parellel/src/RC4.cpp
-RC4.h
-/home/nicolas/Documents/rc4parellel/src/RC4.h
-
-/home/nicolas/Documents/rc4parellel/src/RC4.h
-string.h
+mutex
 -
-stdio.h
+vector
 -
-stdlib.h
--
-iostream
+iterator
 -
 
-/home/nicolas/Documents/rc4parellel/src/main.cpp
-iostream
--
-Functions.h
-/home/nicolas/Documents/rc4parellel/src/Functions.h
+/home/olivier/CLionProjects/rc4parellel/src/FileAccessor/FileAccessor.cpp
+FileAccessor.h
+/home/olivier/CLionProjects/rc4parellel/src/FileAccessor/FileAccessor.h
+
+/home/olivier/CLionProjects/rc4parellel/src/FileAccessor/FileAccessor.h
+../Common/Includes.h
+/home/olivier/CLionProjects/rc4parellel/src/Common/Includes.h
 

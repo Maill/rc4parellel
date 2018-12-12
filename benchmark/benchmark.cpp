@@ -3,9 +3,9 @@
 //
 
 #include <benchmark/benchmark.h>
-#include "../src/Functions.h"
-
-using namespace Functions;
+#include "../src/Common/Functions.h"
+#include "../src/FileAccessor/FileAccessor.h"
+#include "../src/ThreadManager/ThreadManager.h"
 
 //////////////////////////////////////////////////////////////
 static void encryptTinyTextFileSequential(benchmark::State& state) {
@@ -15,9 +15,9 @@ static void encryptTinyTextFileSequential(benchmark::State& state) {
     string pathOutput = "../data/2_input";
 
     for (auto _ : state) {
-        //RC4 work
-        map<int, pair<int, unsigned char*>> parts = launchWorkSequential(pathInput, key);
-        writeIntoFile(parts, pathOutput, (int)getStringFromFile(pathInput).length());
+        FileAccessor fileAccessor(pathInput, pathOutput);
+        ThreadManager tm(&fileAccessor, 1, key);
+        tm.startWork();
     }
 }
 
@@ -28,9 +28,9 @@ static void decryptTinyTextFileSequential(benchmark::State& state) {
     string pathOutput = "../data/2_output";
 
     for (auto _ : state) {
-        //RC4 work
-        map<int, pair<int, unsigned char*>> parts = launchWorkSequential(pathInput, key);
-        writeIntoFile(parts, pathOutput, (int)getStringFromFile(pathInput).length());
+        FileAccessor fileAccessor(pathInput, pathOutput);
+        ThreadManager tm(&fileAccessor, 1, key);
+        tm.startWork();
     }
 }
 //////////////////////////////////////////////////////////////
@@ -43,9 +43,9 @@ static void encryptTinyTextFileParallel(benchmark::State& state) {
     int nbThread = 3;
 
     for (auto _ : state) {
-        //RC4 work
-        map<int, pair<int, unsigned char*>> parts = launchWork(nbThread, pathInput, key);
-        writeIntoFile(parts, pathOutput, (int)getStringFromFile(pathInput).length());
+        FileAccessor fileAccessor(pathInput, pathOutput);
+        ThreadManager tm(&fileAccessor, nbThread, key);
+        tm.startWork();
     }
 }
 
@@ -57,9 +57,9 @@ static void decryptTinyTextFileParallel(benchmark::State& state) {
     int nbThread = 3;
     
     for (auto _ : state) {
-        //RC4 work
-        map<int, pair<int, unsigned char*>> parts = launchWork(nbThread, pathInput, key);
-        writeIntoFile(parts, pathOutput, (int)getStringFromFile(pathInput).length());
+        FileAccessor fileAccessor(pathInput, pathOutput);
+        ThreadManager tm(&fileAccessor, nbThread, key);
+        tm.startWork();
     }
 }
 //////////////////////////////////////////////////////////////
@@ -73,9 +73,9 @@ static void encryptBigTextFileSequential(benchmark::State& state) {
     string pathOutput = "../data/4_input";
     
     for (auto _ : state) {
-        //RC4 work
-        map<int, pair<int, unsigned char*>> parts = launchWorkSequential(pathInput, key);
-        writeIntoFile(parts, pathOutput, (int)getStringFromFile(pathInput).length());
+        FileAccessor fileAccessor(pathInput, pathOutput);
+        ThreadManager tm(&fileAccessor, 1, key);
+        tm.startWork();
     }
 }
 
@@ -86,9 +86,9 @@ static void decryptBigTextFileSequential(benchmark::State& state) {
     string pathOutput = "../data/4_output";
     
     for (auto _ : state) {
-        //RC4 work
-        map<int, pair<int, unsigned char*>> parts = launchWorkSequential(pathInput, key);
-        writeIntoFile(parts, pathOutput, (int)getStringFromFile(pathInput).length());
+        FileAccessor fileAccessor(pathInput, pathOutput);
+        ThreadManager tm(&fileAccessor, 1, key);
+        tm.startWork();
     }
 }
 //////////////////////////////////////////////////////////////
@@ -101,9 +101,9 @@ static void encryptBigTextFileParallel(benchmark::State& state) {
     int nbThread = 3;
     
     for (auto _ : state) {
-        //RC4 work
-        map<int, pair<int, unsigned char*>> parts = launchWork(nbThread, pathInput, key);
-        writeIntoFile(parts, pathOutput, (int)getStringFromFile(pathInput).length());
+        FileAccessor fileAccessor(pathInput, pathOutput);
+        ThreadManager tm(&fileAccessor, nbThread, key);
+        tm.startWork();
     }
 }
 
@@ -115,9 +115,9 @@ static void decryptBigTextFileParallel(benchmark::State& state) {
     int nbThread = 3;
     
     for (auto _ : state) {
-        //RC4 work
-        map<int, pair<int, unsigned char*>> parts = launchWork(nbThread, pathInput, key);
-        writeIntoFile(parts, pathOutput, (int)getStringFromFile(pathInput).length());
+        FileAccessor fileAccessor(pathInput, pathOutput);
+        ThreadManager tm(&fileAccessor, nbThread, key);
+        tm.startWork();
     }
 }
 //////////////////////////////////////////////////////////////
@@ -131,9 +131,9 @@ static void encryptBigBinaryFileSequential(benchmark::State& state) {
     string pathOutput = "../data/6_input";
     
     for (auto _ : state) {
-        //RC4 work
-        map<int, pair<int, unsigned char*>> parts = launchWorkSequential(pathInput, key);
-        writeIntoFile(parts, pathOutput, (int)getStringFromFile(pathInput).length());
+        FileAccessor fileAccessor(pathInput, pathOutput);
+        ThreadManager tm(&fileAccessor, 1, key);
+        tm.startWork();
     }
 }
 
@@ -144,9 +144,9 @@ static void decryptBigBinaryFileSequential(benchmark::State& state) {
     string pathOutput = "../data/6_output.jpg";
     
     for (auto _ : state) {
-        //RC4 work
-        map<int, pair<int, unsigned char*>> parts = launchWorkSequential(pathInput, key);
-        writeIntoFile(parts, pathOutput, (int)getStringFromFile(pathInput).length());
+        FileAccessor fileAccessor(pathInput, pathOutput);
+        ThreadManager tm(&fileAccessor, 1, key);
+        tm.startWork();
     }
 }
 //////////////////////////////////////////////////////////////
@@ -159,9 +159,9 @@ static void encryptBigBinaryFileParallel(benchmark::State& state) {
     int nbThread = 3;
     
     for (auto _ : state) {
-        //RC4 work
-        map<int, pair<int, unsigned char*>> parts = launchWork(nbThread, pathInput, key);
-        writeIntoFile(parts, pathOutput, (int)getStringFromFile(pathInput).length());
+        FileAccessor fileAccessor(pathInput, pathOutput);
+        ThreadManager tm(&fileAccessor, nbThread, key);
+        tm.startWork();
     }
 }
 
@@ -173,9 +173,9 @@ static void decryptBigBinaryFileParallel(benchmark::State& state) {
     int nbThread = 3;
     
     for (auto _ : state) {
-        //RC4 work
-        map<int, pair<int, unsigned char*>> parts = launchWork(nbThread, pathInput, key);
-        writeIntoFile(parts, pathOutput, (int)getStringFromFile(pathInput).length());
+        FileAccessor fileAccessor(pathInput, pathOutput);
+        ThreadManager tm(&fileAccessor, nbThread, key);
+        tm.startWork();
     }
 }
 //////////////////////////////////////////////////////////////

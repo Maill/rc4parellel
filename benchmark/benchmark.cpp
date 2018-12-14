@@ -8,7 +8,7 @@
 #include "../src/ThreadManager/ThreadManager.h"
 
 //////////////////////////////////////////////////////////////
-static void encryptTinyTextFileSequential(benchmark::State& state) {
+static void encryptTinyTextFileOneThread(benchmark::State& state) {
     //Variable init
     string key = "iamarandomkey";
     string pathInput = "../data/1_input";
@@ -21,7 +21,7 @@ static void encryptTinyTextFileSequential(benchmark::State& state) {
     }
 }
 
-static void decryptTinyTextFileSequential(benchmark::State& state) {
+static void decryptTinyTextFileOneThread(benchmark::State& state) {
     //Variable init
     string key = "iamarandomkey";
     string pathInput = "../data/2_input";
@@ -66,7 +66,7 @@ static void decryptTinyTextFileParallel(benchmark::State& state) {
 
 
 //////////////////////////////////////////////////////////////
-static void encryptBigTextFileSequential(benchmark::State& state) {
+static void encryptBigTextFileOneThread(benchmark::State& state) {
     //Variable init
     string key = "iamananotherrandomkey";
     string pathInput = "../data/3_input";
@@ -79,7 +79,7 @@ static void encryptBigTextFileSequential(benchmark::State& state) {
     }
 }
 
-static void decryptBigTextFileSequential(benchmark::State& state) {
+static void decryptBigTextFileOneThread(benchmark::State& state) {
     //Variable init
     string key = "iamananotherrandomkey";
     string pathInput = "../data/4_input";
@@ -124,7 +124,7 @@ static void decryptBigTextFileParallel(benchmark::State& state) {
 
 
 //////////////////////////////////////////////////////////////
-static void encryptBigBinaryFileSequential(benchmark::State& state) {
+static void encryptBigBinaryFileOneThread(benchmark::State& state) {
     //Variable init
     string key = "akeyforabigphoto";
     string pathInput = "../data/5_input.jpg";
@@ -137,7 +137,7 @@ static void encryptBigBinaryFileSequential(benchmark::State& state) {
     }
 }
 
-static void decryptBigBinaryFileSequential(benchmark::State& state) {
+static void decryptBigBinaryFileOneThread(benchmark::State& state) {
     //Variable init
     string key = "akeyforabigphoto";
     string pathInput = "../data/6_input";
@@ -180,25 +180,64 @@ static void decryptBigBinaryFileParallel(benchmark::State& state) {
 }
 //////////////////////////////////////////////////////////////
 
+
+//////////////////////////////////////////////////////////////
+static void encrypt1GoBinaryFileParallel(benchmark::State& state) {
+    //Variable init
+    string key = "akeyforabigphoto";
+    string pathInput = "../data/1GB.zip";
+    string pathOutput = "../data/1GB.zip.rc4";
+    int nbThread = 4;
+
+    for (auto _ : state) {
+        FileAccessor fileAccessor(pathInput, pathOutput);
+        ThreadManager tm(&fileAccessor, nbThread, key);
+        tm.startWork();
+    }
+}
+
+static void decrypt1GoBinaryFileParallel(benchmark::State& state) {
+    //Variable init
+    string key = "akeyforabigphoto";
+    string pathInput = "../data/1GB.zip.rc4";
+    string pathOutput = "../data/1GB.zip.rc4.decrypt";
+    int nbThread = 4;
+
+    for (auto _ : state) {
+        FileAccessor fileAccessor(pathInput, pathOutput);
+        ThreadManager tm(&fileAccessor, nbThread, key);
+        tm.startWork();
+    }
+}
+//////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 //Tiny Text Sequential Benchmark
-BENCHMARK(encryptTinyTextFileSequential);
-BENCHMARK(decryptTinyTextFileSequential);
+BENCHMARK(encryptTinyTextFileOneThread);
+BENCHMARK(decryptTinyTextFileOneThread);
 //Tiny Text Parallel Benchmark
 BENCHMARK(encryptTinyTextFileParallel);
 BENCHMARK(decryptTinyTextFileParallel);
 
 //Big Text Sequential Benchmark
-BENCHMARK(encryptBigTextFileSequential);
-BENCHMARK(decryptBigTextFileSequential);
+BENCHMARK(encryptBigTextFileOneThread);
+BENCHMARK(decryptBigTextFileOneThread);
 //Big Text Parallel Benchmark
 BENCHMARK(encryptBigTextFileParallel);
 BENCHMARK(decryptBigTextFileParallel);
 
 //Big Binary Sequential Benchmark
-BENCHMARK(encryptBigBinaryFileSequential);
-BENCHMARK(decryptBigBinaryFileSequential);
+BENCHMARK(encryptBigBinaryFileOneThread);
+BENCHMARK(decryptBigBinaryFileOneThread);
 //Big Binary Parallel Benchmark
 BENCHMARK(encryptBigBinaryFileParallel);
 BENCHMARK(decryptBigBinaryFileParallel);
+
+BENCHMARK(encrypt1GoBinaryFileParallel);
+BENCHMARK(decrypt1GoBinaryFileParallel);
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 
 BENCHMARK_MAIN();

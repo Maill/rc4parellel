@@ -22,6 +22,7 @@
 #include <mutex>
 #include <vector>
 #include <iterator>
+#include <immintrin.h>
 
 using namespace std;
 

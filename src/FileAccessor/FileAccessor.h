@@ -32,19 +32,13 @@ class FileAccessor {
          * Get the next chunk of data of the input file
          * @return A pair with the position of the pointer on the beginning of the read and a vector that encapsulate the data
          */
-        pair<int, vector<unsigned char>> getNextChunk();
+        pair<int[2], unsigned char*> getNextChunk();
 
         /**
          * Write the data of the chunk into the output file
          * @param chunk Data chunk to be written
          */
-        void writeChunk(pair<int, vector<unsigned char>> chunk);
-
-        /**
-         * Check if there any data left to read in the input file
-         * @return State of the read
-         */
-        bool noDataToRead();
+        void writeChunk(pair<int[2], unsigned char*> chunk);
 
         /**
          * Data length of the input file

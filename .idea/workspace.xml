@@ -1,29 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/CMakeLists.txt" line="19" />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="rc4parallel" targetName="gtest_main" />
-      <config projectName="rc4parallel" targetName="gmock" />
-      <config projectName="rc4parallel" targetName="benchmark" />
-      <config projectName="rc4parallel" targetName="rc4parallel" />
-      <config projectName="rc4parallel" targetName="test_RC4" />
       <config projectName="rc4parallel" targetName="benchmark_main" />
-      <config projectName="rc4parallel" targetName="gmock_main" />
-      <config projectName="rc4parallel" targetName="bench_RC4" />
+      <config projectName="rc4parallel" targetName="rc4parallel" />
       <config projectName="rc4parallel" targetName="gtest" />
+      <config projectName="rc4parallel" targetName="gmock_main" />
+      <config projectName="rc4parallel" targetName="gtest_main" />
+      <config projectName="rc4parallel" targetName="test_RC4" />
+      <config projectName="rc4parallel" targetName="benchmark" />
+      <config projectName="rc4parallel" targetName="gmock" />
+      <config projectName="rc4parallel" targetName="bench_RC4" />
     </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
+      <configuration PROFILE_NAME="Release" CONFIG_NAME="Release" />
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67b09a22-86f6-4343-a9bb-0148bd786a4a" name="Default Changelist" comment="">
+    <list default="true" id="67b09a22-86f6-4343-a9bb-0148bd786a4a" name="Default Changelist" comment="RC4 Parallel v2b / Improved performance by 780% / Added RELEASE Build profile">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RC4/Quad-RC4/QuadRC4.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RC4/Quad-RC4/QuadRC4.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rc4parallel" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rc4parallel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/benchmark/benchmark.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/benchmark/benchmark.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rc4parallel.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rc4parallel.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rc4parallel.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rc4parallel.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rc4parallel.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rc4parallel.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rc4parallel.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rc4parallel.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rc4parallel.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rc4parallel.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rc4parallel.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rc4parallel.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rc4parallel.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rc4parallel.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rc4parallel.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rc4parallel.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rc4parallel.dir/src/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rc4parallel.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rc4parallel.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/Includes.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Includes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileAccessor/FileAccessor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileAccessor/FileAccessor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileAccessor/FileAccessor.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileAccessor/FileAccessor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RC4/RC4.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/RC4/RC4.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RC4/RC4.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/RC4/RC4.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThreadManager/ThreadManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ThreadManager/ThreadManager.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <ignored path="$PROJECT_DIR$/cmake-build-release/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,142 +83,16 @@
     <select />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
-  <component name="FUSProjectUsageTrigger">
-    <session id="-722636309">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="7" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.20" value="2" />
-          <entry key="project.open.time.21" value="3" />
-          <entry key="project.open.time.22" value="1" />
-          <entry key="project.open.time.23" value="1" />
-          <entry key="project.open.time.26" value="1" />
-          <entry key="project.open.time.33" value="1" />
-          <entry key="project.opened" value="12" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="1_expected" value="3" />
-          <entry key="1_input" value="2" />
-          <entry key="1_output" value="2" />
-          <entry key="3_input" value="1" />
-          <entry key="Makefile" value="2" />
-          <entry key="cpp" value="18" />
-          <entry key="functional" value="1" />
-          <entry key="h" value="23" />
-          <entry key="inputfile" value="2" />
-          <entry key="jpg" value="1" />
-          <entry key="rc4" value="2" />
-          <entry key="rc4parallel (disassembly)" value="5" />
-          <entry key="rc4parallel - encrypt (disassembly)" value="3" />
-          <entry key="txt" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CMakeLists.txt" value="5" />
-          <entry key="Disassembly" value="8" />
-          <entry key="Image" value="1" />
-          <entry key="ObjectiveC" value="42" />
-          <entry key="PLAIN_TEXT" value="15" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="cpp" value="8459" />
-          <entry key="h" value="680" />
-          <entry key="mm" value="33" />
-          <entry key="txt" value="564" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CMakeLists.txt" value="543" />
-          <entry key="Doxygen file" value="3" />
-          <entry key="ObjectiveC" value="9169" />
-          <entry key="PLAIN_TEXT" value="21" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-1534881471">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.19" value="1" />
-          <entry key="project.open.time.20" value="1" />
-          <entry key="project.open.time.21" value="1" />
-          <entry key="project.open.time.23" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="cpp" value="7391" />
-          <entry key="h" value="2184" />
-          <entry key="mm" value="16" />
-          <entry key="txt" value="106" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CMakeLists.txt" value="38" />
-          <entry key="Doxygen file" value="66" />
-          <entry key="ObjectiveC" value="9525" />
-          <entry key="PLAIN_TEXT" value="68" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="cc" value="1" />
-          <entry key="cpp" value="28" />
-          <entry key="functional" value="2" />
-          <entry key="h" value="27" />
-          <entry key="rc4parallel - encrypt (disassembly)" value="6" />
-          <entry key="rc4parellel - decrypt (disassembly)" value="6" />
-          <entry key="txt" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CMakeLists.txt" value="8" />
-          <entry key="Disassembly" value="12" />
-          <entry key="ObjectiveC" value="58" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Common/Functions.cpp">
+        <entry file="file://$PROJECT_DIR$/benchmark/benchmark.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="8" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/FileAccessor/FileAccessor.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="21" column="58" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Common/Includes.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            <state relative-caret-position="190">
+              <caret line="217" column="3" lean-forward="true" selection-start-line="217" selection-start-column="3" selection-end-line="217" selection-end-column="3" />
+              <folding>
+                <element signature="e#42#74#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -188,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="402">
+              <caret line="45" column="24" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -197,7 +109,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1950">
+            <state relative-caret-position="2210">
               <caret line="130" selection-start-line="130" selection-end-line="130" />
               <folding>
                 <element signature="e#42#66#0" expanded="true" />
@@ -206,38 +118,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/RC4/RC4.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ThreadManager/ThreadManager.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RC4/RC4.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Common/Functions.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state relative-caret-position="377">
+              <caret line="59" column="51" lean-forward="true" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -252,6 +137,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -271,33 +157,29 @@
         <option value="$PROJECT_DIR$/src/FileAccessor.h" />
         <option value="$PROJECT_DIR$/src/FileAccessor.cpp" />
         <option value="$PROJECT_DIR$/test/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/benchmark/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/src/RC4/RC4.h" />
-        <option value="$PROJECT_DIR$/src/RC4/RC4.cpp" />
-        <option value="$PROJECT_DIR$/src/FileAccessor/FileAccessor.h" />
-        <option value="$PROJECT_DIR$/src/Common/Includes.h" />
-        <option value="$PROJECT_DIR$/benchmark/benchmark.cpp" />
         <option value="$PROJECT_DIR$/src/ThreadManager/ThreadManager.h" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/Common/Functions.h" />
         <option value="$PROJECT_DIR$/src/Common/Functions.cpp" />
         <option value="$PROJECT_DIR$/test/test.cpp" />
-        <option value="$PROJECT_DIR$/src/ThreadManager/ThreadManager.cpp" />
-        <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/Common/Includes.h" />
+        <option value="$PROJECT_DIR$/benchmark/other.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/RC4/RC4.h" />
+        <option value="$PROJECT_DIR$/benchmark/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/FileAccessor/FileAccessor.h" />
         <option value="$PROJECT_DIR$/src/FileAccessor/FileAccessor.cpp" />
+        <option value="$PROJECT_DIR$/src/ThreadManager/ThreadManager.cpp" />
+        <option value="$PROJECT_DIR$/src/RC4/RC4.cpp" />
+        <option value="$PROJECT_DIR$/benchmark/benchmark.cpp" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-284" />
-    <option name="width" value="1914" />
-    <option name="height" value="1080" />
+    <option name="x" value="-42" />
+    <option name="y" value="-9" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -312,6 +194,11 @@
             <path>
               <item name="rc4parallel" type="b2602c69:ProjectViewProjectNode" />
               <item name="rc4parellel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rc4parallel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rc4parellel" type="462c0819:PsiDirectoryNode" />
+              <item name="benchmark" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rc4parallel" type="b2602c69:ProjectViewProjectNode" />
@@ -342,6 +229,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ThreadManager" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="rc4parallel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rc4parellel" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -355,7 +247,7 @@
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="dynamic.analysis.tools.valgrind" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -380,15 +272,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.rc4parellel - decrypt">
+  <component name="RunManager" selected="Application.Build All">
     <configuration name="RC4.decryptTextFromShortFile" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rc4parallel" TARGET_NAME="test_RC4" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="rc4parallel" RUN_TARGET_NAME="test_RC4" TEST_CLASS="RC4" TEST_METHOD="decryptTextFromShortFile" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="RC4.encryptTextFromShortFile" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rc4parallel" TARGET_NAME="test_RC4" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="rc4parallel" RUN_TARGET_NAME="test_RC4" TEST_CLASS="RC4" TEST_METHOD="encryptTextFromShortFile" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
@@ -406,7 +300,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="benchmark_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rc4parallel" TARGET_NAME="benchmark_main" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="rc4parallel" RUN_TARGET_NAME="bench_RC4">
+    <configuration name="benchmark_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rc4parallel" TARGET_NAME="benchmark_main" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -426,7 +320,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rc4parallel" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
+    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rc4parallel" TARGET_NAME="gtest_main" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="rc4parallel" RUN_TARGET_NAME="test_RC4">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -441,7 +335,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+    <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
@@ -504,6 +398,13 @@
       <workItem from="1544534723152" duration="21225000" />
       <workItem from="1544562799850" duration="9964000" />
       <workItem from="1544606974401" duration="4737000" />
+      <workItem from="1544647203747" duration="346000" />
+      <workItem from="1544647653827" duration="505000" />
+      <workItem from="1544648296123" duration="5480000" />
+      <workItem from="1544735733566" duration="3885000" />
+      <workItem from="1544740292447" duration="923000" />
+      <workItem from="1544813690255" duration="196000" />
+      <workItem from="1544813912881" duration="7990000" />
     </task>
     <task id="LOCAL-00001" summary="RC4 Parallelism =&gt; OK">
       <created>1543085669121</created>
@@ -531,27 +432,27 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181200000" />
+    <option name="totallyTimeSpent" value="200525000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1922" height="950" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16027689" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1716418" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36407766" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39927185" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4312026" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="CMake" order="8" weight="0.3288835" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3288835" />
+      <window_info anchor="bottom" id="CMake" order="8" weight="0.32827735" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32827735" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3288835" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32827735" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -586,15 +487,13 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="RC4 Parallelism =&gt; OK" />
     <MESSAGE value="Benchmarks &amp; cleaned code" />
     <MESSAGE value="RC4 Parallel v2a" />
     <MESSAGE value="RC4 Parallel v2a / Bug : cannot get file size in decrypt mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="RC4 Parallel v2a / Bug : cannot get file size in decrypt mode" />
+    <MESSAGE value="RC4 Parallel v2b / Improved performance by 780% / Added RELEASE Build profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="RC4 Parallel v2b / Improved performance by 780% / Added RELEASE Build profile" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -626,67 +525,17 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/include/c++/6/bits/predefined_ops.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="198" selection-start-line="198" selection-end-line="198" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/6/bits/basic_string.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="5074" selection-start-line="5074" selection-end-line="5074" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/6/bits/stl_algo.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="161" selection-start-line="161" selection-end-line="161" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/6/bits/stl_vector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="566" selection-start-line="566" selection-end-line="566" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/6/bits/char_traits.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="261" selection-start-line="261" selection-end-line="261" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/include/c++/6/bits/predefined_ops.h" />
+    <entry file="file:///usr/include/c++/6/bits/basic_string.h" />
+    <entry file="file:///usr/include/c++/6/bits/stl_algo.h" />
+    <entry file="file:///usr/include/c++/6/bits/stl_vector.h" />
+    <entry file="file:///usr/include/c++/6/bits/char_traits.h" />
     <entry file="file://$PROJECT_DIR$/src/PasswordGenerator.cpp" />
-    <entry file="file:///usr/include/c++/6/ext/new_allocator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1545">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/6/bits/stl_map.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="185" selection-start-line="185" selection-end-line="185" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/6/bits/stl_tree.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="837" selection-start-line="837" selection-end-line="837" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/include/c++/6/ext/new_allocator.h" />
+    <entry file="file:///usr/include/c++/6/bits/stl_map.h" />
+    <entry file="file:///usr/include/c++/6/bits/stl_tree.h" />
     <entry file="file://$PROJECT_DIR$/src/RC4_2.h" />
     <entry file="file://$PROJECT_DIR$/src/RC4_2.cpp" />
-    <entry file="file://$PROJECT_DIR$/test/md5.h" />
-    <entry file="file://$PROJECT_DIR$/test/md5.cpp" />
     <entry file="file://$PROJECT_DIR$/test/MD5.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -704,27 +553,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/c++/6/ext/atomicity.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/6/future">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="524" selection-start-line="524" selection-end-line="524" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/x86_64-linux-gnu/c++/6/bits/c++config.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="198" selection-start-line="198" selection-end-line="198" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/include/c++/6/ext/atomicity.h" />
+    <entry file="file:///usr/include/c++/6/future" />
+    <entry file="file:///usr/include/x86_64-linux-gnu/c++/6/bits/c++config.h" />
     <entry file="file://$PROJECT_DIR$/lib/googletest/googletest/make/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="393">
@@ -739,13 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/benchmark/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="72" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/benchmark/src/benchmark_main.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -753,96 +577,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/libio.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RC4/RC4.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="66" column="41" lean-forward="true" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/benchmark/benchmark.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2760">
-          <caret line="184" column="41" selection-start-line="184" selection-start-column="41" selection-end-line="184" selection-end-column="41" />
-          <folding>
-            <element signature="e#42#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FileAccessor/FileAccessor.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ThreadManager/ThreadManager.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-377">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/6/functional">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="1380" selection-start-line="1380" selection-end-line="1380" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="130" selection-start-line="130" selection-end-line="130" />
-          <folding>
-            <element signature="e#42#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ThreadManager/ThreadManager.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RC4/RC4.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Common/Functions.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Common/Includes.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/include/libio.h" />
+    <entry file="file:///usr/include/c++/6/functional" />
     <entry file="file://$PROJECT_DIR$/src/Common/Functions.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -850,17 +586,117 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+    <entry file="file://$PROJECT_DIR$/lib/googletest/googletest/scripts/test/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="428">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Common/Functions.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/benchmark/other.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Common/Includes.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding>
+            <element signature="e#257#276#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileAccessor/FileAccessor.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FileAccessor/FileAccessor.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="21" column="58" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
+        <state relative-caret-position="858">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/benchmark/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ThreadManager/ThreadManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="58" column="28" lean-forward="true" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ThreadManager/ThreadManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RC4/RC4.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="59" column="11" lean-forward="true" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2210">
+          <caret line="130" selection-start-line="130" selection-end-line="130" />
+          <folding>
+            <element signature="e#42#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="45" column="24" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/benchmark/benchmark.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="217" column="3" lean-forward="true" selection-start-line="217" selection-start-column="3" selection-end-line="217" selection-end-column="3" />
+          <folding>
+            <element signature="e#42#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RC4/RC4.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="59" column="51" lean-forward="true" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
         </state>
       </provider>
     </entry>

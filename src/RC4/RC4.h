@@ -32,7 +32,7 @@ class RC4 {
          * Start the RC4 encryption/decryption
          * @param chunk Data chunk from the file
          */
-        void execute(pair<int, vector<unsigned char>>* chunk);
+        void execute(pair<int[2], unsigned char*>* chunk);
 
         /**
          * [Unsed] Calculate the indexes and permutation table encryption to a certain point for encryption/decryption texts parts
@@ -58,7 +58,7 @@ class RC4 {
          * RC4 encryption/decryption algorithm
          * @param text Text vector from the chunk
          */
-        void prga(vector<unsigned char>* text);
+        void prga(unsigned char* text, int size);
 
         /**
          * Permutation encryption table

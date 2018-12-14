@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/olivier/CLionProjects/rc4parellel/src/Common/Includes.h
+C:/Users/Nicol/Desktop/rc4parellel/src/Common/Functions.h
+../Common/Includes.h
+C:/Users/Nicol/Desktop/rc4parellel/src/Common/Includes.h
+
+C:/Users/Nicol/Desktop/rc4parellel/src/Common/Includes.h
 iostream
 -
 queue
@@ -29,12 +33,32 @@ vector
 -
 iterator
 -
+immintrin.h
+-
 
-/home/olivier/CLionProjects/rc4parellel/src/FileAccessor/FileAccessor.cpp
-FileAccessor.h
-/home/olivier/CLionProjects/rc4parellel/src/FileAccessor/FileAccessor.h
-
-/home/olivier/CLionProjects/rc4parellel/src/FileAccessor/FileAccessor.h
+C:/Users/Nicol/Desktop/rc4parellel/src/FileAccessor/FileAccessor.h
 ../Common/Includes.h
-/home/olivier/CLionProjects/rc4parellel/src/Common/Includes.h
+C:/Users/Nicol/Desktop/rc4parellel/src/Common/Includes.h
+
+C:/Users/Nicol/Desktop/rc4parellel/src/RC4/RC4.h
+../Common/Includes.h
+C:/Users/Nicol/Desktop/rc4parellel/src/Common/Includes.h
+
+C:/Users/Nicol/Desktop/rc4parellel/src/ThreadManager/ThreadManager.h
+../Common/Includes.h
+C:/Users/Nicol/Desktop/rc4parellel/src/Common/Includes.h
+../FileAccessor/FileAccessor.h
+C:/Users/Nicol/Desktop/rc4parellel/src/FileAccessor/FileAccessor.h
+../RC4/RC4.h
+C:/Users/Nicol/Desktop/rc4parellel/src/RC4/RC4.h
+
+C:/Users/Nicol/Desktop/rc4parellel/src/main.cpp
+Common/Includes.h
+C:/Users/Nicol/Desktop/rc4parellel/src/Common/Includes.h
+Common/Functions.h
+C:/Users/Nicol/Desktop/rc4parellel/src/Common/Functions.h
+FileAccessor/FileAccessor.h
+C:/Users/Nicol/Desktop/rc4parellel/src/FileAccessor/FileAccessor.h
+ThreadManager/ThreadManager.h
+C:/Users/Nicol/Desktop/rc4parellel/src/ThreadManager/ThreadManager.h
 

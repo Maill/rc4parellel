@@ -1,164 +1,48 @@
-Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_2015c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2015c.dir/build.make CMakeFiles/cmTC_2015c.dir/build
-make[1] : on entre dans le répertoire « /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_2015c.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_2015c.dir/CheckSymbolExists.c.o   -c /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_2015c
-/opt/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2015c.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_2015c.dir/CheckSymbolExists.c.o  -o cmTC_2015c 
-CMakeFiles/cmTC_2015c.dir/CheckSymbolExists.c.o : Dans la fonction « main » :
-CheckSymbolExists.c:(.text+0x1b) : référence indéfinie vers « pthread_create »
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_2015c.dir/build.make:86 : la recette pour la cible « cmTC_2015c » a échouée
-make[1]: *** [cmTC_2015c] Erreur 1
-make[1] : on quitte le répertoire « /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp »
-Makefile:121 : la recette pour la cible « cmTC_2015c/fast » a échouée
-make: *** [cmTC_2015c/fast] Erreur 2
-
-File /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
-/* */
-#include <pthread.h>
-
-int main(int argc, char** argv)
-{
-  (void)argv;
-#ifndef pthread_create
-  return ((int*)(&pthread_create))[argc];
-#else
-  (void)argc;
-  return 0;
-#endif
-}
-
-Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_495f1/fast"
-/usr/bin/make -f CMakeFiles/cmTC_495f1.dir/build.make CMakeFiles/cmTC_495f1.dir/build
-make[1] : on entre dans le répertoire « /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_495f1.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_495f1.dir/CheckFunctionExists.c.o   -c /opt/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CheckFunctionExists.c
-Linking C executable cmTC_495f1
-/opt/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_495f1.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_495f1.dir/CheckFunctionExists.c.o  -o cmTC_495f1 -lpthreads 
-/usr/bin/ld : ne peut trouver -lpthreads
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_495f1.dir/build.make:86 : la recette pour la cible « cmTC_495f1 » a échouée
-make[1]: *** [cmTC_495f1] Erreur 1
-make[1] : on quitte le répertoire « /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp »
-Makefile:121 : la recette pour la cible « cmTC_495f1/fast » a échouée
-make: *** [cmTC_495f1/fast] Erreur 2
-
-
-Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_cf6e9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_cf6e9.dir/build.make CMakeFiles/cmTC_cf6e9.dir/build
-make[1] : on entre dans le répertoire « /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_cf6e9.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_cf6e9.dir/CheckSymbolExists.c.o   -c /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_cf6e9
-/opt/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf6e9.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_cf6e9.dir/CheckSymbolExists.c.o  -o cmTC_cf6e9 
-CMakeFiles/cmTC_cf6e9.dir/CheckSymbolExists.c.o : Dans la fonction « main » :
-CheckSymbolExists.c:(.text+0x1b) : référence indéfinie vers « pthread_create »
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_cf6e9.dir/build.make:86 : la recette pour la cible « cmTC_cf6e9 » a échouée
-make[1]: *** [cmTC_cf6e9] Erreur 1
-make[1] : on quitte le répertoire « /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp »
-Makefile:121 : la recette pour la cible « cmTC_cf6e9/fast » a échouée
-make: *** [cmTC_cf6e9/fast] Erreur 2
-
-File /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
-/* */
-#include <pthread.h>
-
-int main(int argc, char** argv)
-{
-  (void)argv;
-#ifndef pthread_create
-  return ((int*)(&pthread_create))[argc];
-#else
-  (void)argc;
-  return 0;
-#endif
-}
-
-Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_e7fdb/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e7fdb.dir/build.make CMakeFiles/cmTC_e7fdb.dir/build
-make[1] : on entre dans le répertoire « /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_e7fdb.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e7fdb.dir/CheckFunctionExists.c.o   -c /opt/clion-2018.2.4/bin/cmake/linux/share/cmake-3.12/Modules/CheckFunctionExists.c
-Linking C executable cmTC_e7fdb
-/opt/clion-2018.2.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7fdb.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_e7fdb.dir/CheckFunctionExists.c.o  -o cmTC_e7fdb -lpthreads 
-/usr/bin/ld : ne peut trouver -lpthreads
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_e7fdb.dir/build.make:86 : la recette pour la cible « cmTC_e7fdb » a échouée
-make[1]: *** [cmTC_e7fdb] Erreur 1
-make[1] : on quitte le répertoire « /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp »
-Makefile:121 : la recette pour la cible « cmTC_e7fdb/fast » a échouée
-make: *** [cmTC_e7fdb/fast] Erreur 2
-
-
 Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32 failed with the following output:
-Change Dir: /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/Nicol/Desktop/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0dbe7/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0dbe7.dir/build.make CMakeFiles/cmTC_0dbe7.dir/build
-make[1]: Entering directory '/home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_0dbe7.dir/src.cxx.o
-/usr/bin/c++    -Wall -g -fdiagnostics-color=auto -std=c++11 -lpthread  -std=c++11  -Wall  -Wextra  -Wshadow  -pedantic  -pedantic-errors -DHAVE_CXX_FLAG_WSHORTEN_64_TO_32  -Wshorten-64-to-32   -Wshorten-64-to-32 -o CMakeFiles/cmTC_0dbe7.dir/src.cxx.o -c /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-c++: error: unrecognized command line option '-Wshorten-64-to-32'
-c++: error: unrecognized command line option '-Wshorten-64-to-32'
-CMakeFiles/cmTC_0dbe7.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_0dbe7.dir/src.cxx.o' failed
-make[1]: *** [CMakeFiles/cmTC_0dbe7.dir/src.cxx.o] Error 1
-make[1]: Leaving directory '/home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_0dbe7/fast' failed
-make: *** [cmTC_0dbe7/fast] Error 2
+Run Build Command:"C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe" "cmTC_deb05/fast"
+C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_deb05.dir\build.make CMakeFiles/cmTC_deb05.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Nicol/Desktop/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_deb05.dir/src.cxx.obj
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE    -Wall -Wextra -g -fdiagnostics-color=auto -std=c++11 -lpthread  -std=c++11  -Wall  -Wextra  -Wshadow  -pedantic  -pedantic-errors -DHAVE_CXX_FLAG_WSHORTEN_64_TO_32  -Wshorten-64-to-32   -Wshorten-64-to-32 -o CMakeFiles\cmTC_deb05.dir\src.cxx.obj -c C:\Users\Nicol\Desktop\rc4parellel\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+G__~1.EXE: error: unrecognized command line option '-Wshorten-64-to-32'
+G__~1.EXE: error: unrecognized command line option '-Wshorten-64-to-32'
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_deb05.dir\build.make:65: CMakeFiles/cmTC_deb05.dir/src.cxx.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Nicol/Desktop/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:120: cmTC_deb05/fast] Error 2
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WD654 failed with the following output:
-Change Dir: /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/Nicol/Desktop/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2f452/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2f452.dir/build.make CMakeFiles/cmTC_2f452.dir/build
-make[1]: Entering directory '/home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2f452.dir/src.cxx.o
-/usr/bin/c++    -Wall -g -fdiagnostics-color=auto -std=c++11 -lpthread  -std=c++11  -Wall  -Wextra  -Wshadow  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DHAVE_CXX_FLAG_WD654  -wd654   -wd654 -o CMakeFiles/cmTC_2f452.dir/src.cxx.o -c /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-c++: error: unrecognized command line option '-wd654'
-c++: error: unrecognized command line option '-wd654'
-CMakeFiles/cmTC_2f452.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_2f452.dir/src.cxx.o' failed
-make[1]: *** [CMakeFiles/cmTC_2f452.dir/src.cxx.o] Error 1
-make[1]: Leaving directory '/home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_2f452/fast' failed
-make: *** [cmTC_2f452/fast] Error 2
+Run Build Command:"C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe" "cmTC_6ba77/fast"
+C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_6ba77.dir\build.make CMakeFiles/cmTC_6ba77.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Nicol/Desktop/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6ba77.dir/src.cxx.obj
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE    -Wall -Wextra -g -fdiagnostics-color=auto -std=c++11 -lpthread  -std=c++11  -Wall  -Wextra  -Wshadow  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DHAVE_CXX_FLAG_WD654  -wd654   -wd654 -o CMakeFiles\cmTC_6ba77.dir\src.cxx.obj -c C:\Users\Nicol\Desktop\rc4parellel\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+G__~1.EXE: error: unrecognized command line option '-wd654'
+G__~1.EXE: error: unrecognized command line option '-wd654'
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_6ba77.dir\build.make:65: CMakeFiles/cmTC_6ba77.dir/src.cxx.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Nicol/Desktop/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:120: cmTC_6ba77/fast] Error 2
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WTHREAD_SAFETY failed with the following output:
-Change Dir: /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/Nicol/Desktop/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_72191/fast"
-/usr/bin/make -f CMakeFiles/cmTC_72191.dir/build.make CMakeFiles/cmTC_72191.dir/build
-make[1]: Entering directory '/home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_72191.dir/src.cxx.o
-/usr/bin/c++    -Wall -g -fdiagnostics-color=auto -std=c++11 -lpthread  -std=c++11  -Wall  -Wextra  -Wshadow  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DHAVE_CXX_FLAG_WTHREAD_SAFETY  -Wthread-safety   -Wthread-safety -o CMakeFiles/cmTC_72191.dir/src.cxx.o -c /home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-c++: error: unrecognized command line option '-Wthread-safety'; did you mean '-fthread-jumps'?
-c++: error: unrecognized command line option '-Wthread-safety'; did you mean '-fthread-jumps'?
-CMakeFiles/cmTC_72191.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_72191.dir/src.cxx.o' failed
-make[1]: *** [CMakeFiles/cmTC_72191.dir/src.cxx.o] Error 1
-make[1]: Leaving directory '/home/olivier/CLionProjects/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_72191/fast' failed
-make: *** [cmTC_72191/fast] Error 2
+Run Build Command:"C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe" "cmTC_bb572/fast"
+C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_bb572.dir\build.make CMakeFiles/cmTC_bb572.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Nicol/Desktop/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_bb572.dir/src.cxx.obj
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE    -Wall -Wextra -g -fdiagnostics-color=auto -std=c++11 -lpthread  -std=c++11  -Wall  -Wextra  -Wshadow  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing -DHAVE_CXX_FLAG_WTHREAD_SAFETY  -Wthread-safety   -Wthread-safety -o CMakeFiles\cmTC_bb572.dir\src.cxx.obj -c C:\Users\Nicol\Desktop\rc4parellel\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx
+G__~1.EXE: error: unrecognized command line option '-Wthread-safety'; did you mean '-fthread-jumps'?
+G__~1.EXE: error: unrecognized command line option '-Wthread-safety'; did you mean '-fthread-jumps'?
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_bb572.dir\build.make:65: CMakeFiles/cmTC_bb572.dir/src.cxx.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Nicol/Desktop/rc4parellel/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:120: cmTC_bb572/fast] Error 2
 
 Source file was:
 int main() { return 0; }

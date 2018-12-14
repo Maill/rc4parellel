@@ -35,8 +35,8 @@ void RC4::setKey(string key, long size) {
  * Start the RC4 encryption/decryption
  * @param chunk Data chunk from the file
  */
-void RC4::execute(pair<int, vector<unsigned char>>* chunk) {
-    prga(&chunk->second);
+void RC4::execute(pair<int[2], unsigned char*>* chunk) {
+    prga(chunk->second, chunk->first[1]);
 }
 
 /**
@@ -46,13 +46,13 @@ void RC4::execute(pair<int, vector<unsigned char>>* chunk) {
 void RC4::ksa(unsigned char *key) {
     int j = 0;
     for(int i = 0; i < 256; i++){
-        j = (j + permutationTable[i] + key[i % keySize]) % 256;
-        swap(i, j);
+        j = (j + permutationTable[i] + key[i % keySize]) & 0xFF;
+        std::swap(permutationTable[i], permutationTable[j]);
     }
 }
 
 /**
- * Swap the values on the permutation table encryption
+ * [Unsed] Swap the values on the permutation table encryption
  * @param i First value to swap
  * @param j Second value to swap
  */
@@ -66,12 +66,12 @@ void RC4::swap(int i, int j) {
  * RC4 encryption/decryption algorithm
  * @param text Text vector from the chunk
  */
-void RC4::prga(vector<unsigned char>* text) {
-    for (unsigned char &k : *text) {
-        indexI = (indexI + 1) % 256;
-        indexJ = (indexJ + permutationTable[indexI]) % 256;
-        swap(indexI, indexJ);
-        k = permutationTable[(permutationTable[indexI] + permutationTable[indexJ]) % 256] ^ k;
+void RC4::prga(unsigned char* text, int size) {
+    for (int i = 0; i < size; i++) {
+        indexI = (indexI + 1) & 0xFF;
+        indexJ = (indexJ + permutationTable[indexI]) & 0xFF;
+        std::swap(permutationTable[indexI], permutationTable[indexJ]);
+        text[i] = permutationTable[(permutationTable[indexI] + permutationTable[indexJ]) & 0xFF] ^ text[i];
     }
 }
 
@@ -83,6 +83,6 @@ void RC4::setIndexes(int end) {
     for(int k = 0; k < end; k++) {
         indexI = (indexI + 1) % 256;
         indexJ = (indexJ + permutationTable[indexI]) % 256;
-        swap(indexI, indexJ);
+        std::swap(permutationTable[indexI], permutationTable[indexJ]);
     }
 }

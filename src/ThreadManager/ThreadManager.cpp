@@ -36,7 +36,7 @@ ThreadManager::~ThreadManager() {
  */
 void ThreadManager::startWork() {
     baseRC4 = RC4();
-    baseRC4.setKey(key, key.size());
+    baseRC4.setKey(key, static_cast<long>(key.size()));
 
     for(int i = 0; i < threadNumber; i++){
         listThreads->emplace_back(thread(&ThreadManager::threadWork, this));
@@ -48,10 +48,10 @@ void ThreadManager::startWork() {
  * Method for thread to handle the work
  */
 void ThreadManager::threadWork() {
-    while (!fileAccessor->noDataToRead()){
-        pair<int, vector<unsigned char>> chunk = fileAccessor->getNextChunk();
+    while (true){
+        pair<int[2], unsigned char*> chunk = fileAccessor->getNextChunk();
 
-        if(chunk.second.empty())
+        if(chunk.second == nullptr)
             return;
 
         RC4 rc4;

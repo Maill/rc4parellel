@@ -40,7 +40,7 @@ static void encryptTinyTextFileParallel(benchmark::State& state) {
     string key = "iamarandomkey";
     string pathInput = "../data/1_input";
     string pathOutput = "../data/2_input";
-    int nbThread = 3;
+    int nbThread = 4;
 
     for (auto _ : state) {
         FileAccessor fileAccessor(pathInput, pathOutput);
@@ -54,7 +54,7 @@ static void decryptTinyTextFileParallel(benchmark::State& state) {
     string key = "iamarandomkey";
     string pathInput = "../data/2_input";
     string pathOutput = "../data/2_output";
-    int nbThread = 3;
+    int nbThread = 4;
     
     for (auto _ : state) {
         FileAccessor fileAccessor(pathInput, pathOutput);
@@ -98,7 +98,7 @@ static void encryptBigTextFileParallel(benchmark::State& state) {
     string key = "iamananotherrandomkey";
     string pathInput = "../data/3_input";
     string pathOutput = "../data/4_input";
-    int nbThread = 3;
+    int nbThread = 4;
     
     for (auto _ : state) {
         FileAccessor fileAccessor(pathInput, pathOutput);
@@ -112,7 +112,7 @@ static void decryptBigTextFileParallel(benchmark::State& state) {
     string key = "iamananotherrandomkey";
     string pathInput = "../data/4_input";
     string pathOutput = "../data/4_output";
-    int nbThread = 3;
+    int nbThread = 4;
     
     for (auto _ : state) {
         FileAccessor fileAccessor(pathInput, pathOutput);
@@ -156,7 +156,7 @@ static void encryptBigBinaryFileParallel(benchmark::State& state) {
     string key = "akeyforabigphoto";
     string pathInput = "../data/5_input.jpg";
     string pathOutput = "../data/6_input";
-    int nbThread = 3;
+    int nbThread = 4;
     
     for (auto _ : state) {
         FileAccessor fileAccessor(pathInput, pathOutput);
@@ -170,7 +170,7 @@ static void decryptBigBinaryFileParallel(benchmark::State& state) {
     string key = "akeyforabigphoto";
     string pathInput = "../data/6_input";
     string pathOutput = "../data/6_output.jpg";
-    int nbThread = 3;
+    int nbThread = 4;
     
     for (auto _ : state) {
         FileAccessor fileAccessor(pathInput, pathOutput);

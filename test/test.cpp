@@ -1,6 +1,12 @@
-//
-// Created by olivier on 28/11/18.
-//
+/**
+ * Test methods
+ * test.cpp
+ * Purpose : Testing logic of the core program
+ *
+ * @authors Nicolas Cornu, Olivier Lefebvre, Vincent Valvas
+ * @version 0.1
+ * @date 28/11/18
+ */
 
 #include <gtest/gtest.h>
 #include "../src/Common/Functions.h"
@@ -10,12 +16,15 @@
 
 using namespace Functions;
 
+//How many threads to use for test methods
+const int nbThread = 4;
+
+//////////////////////////////////////////////////////////////
 TEST(RC4, encryptTextFromShortFile) {
     //Variable init
     string key = "iamarandomkey";
     string pathInput = "../data/1_input";
     string pathOutput = "../data/2_input";
-    int nbThread = 3;
 
     //RC4 work
     FileAccessor fileAccessor(pathInput, pathOutput);
@@ -29,13 +38,13 @@ TEST(RC4, encryptTextFromShortFile) {
     //Assert
     ASSERT_NE(md5Input, md5Output);
 }
-
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 TEST(RC4, decryptTextFromShortFile) {
     //Variable init
     string key = "iamarandomkey";
     string pathInput = "../data/2_input";
     string pathOutput = "../data/2_output";
-    int nbThread = 3;
 
     //RC4 work
     FileAccessor fileAccessor(pathInput, pathOutput);
@@ -50,13 +59,13 @@ TEST(RC4, decryptTextFromShortFile) {
     //Assert
     ASSERT_EQ(md5Input, md5Output);
 }
-
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 TEST(RC4, encryptTextFromBigFile) {
     //Variable init
     string key = "iamananotherrandomkey";
     string pathInput = "../data/3_input";
     string pathOutput = "../data/4_input";
-    int nbThread = 3;
 
     //RC4 work
     FileAccessor fileAccessor(pathInput, pathOutput);
@@ -70,13 +79,13 @@ TEST(RC4, encryptTextFromBigFile) {
     //Assert
     ASSERT_NE(md5Input, md5Output);
 }
-
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 TEST(RC4, decryptTextFromBigFile) {
     //Variable init
     string key = "iamananotherrandomkey";
     string pathInput = "../data/4_input";
     string pathOutput = "../data/4_output";
-    int nbThread = 3;
 
     //RC4 work
     FileAccessor fileAccessor(pathInput, pathOutput);
@@ -91,13 +100,13 @@ TEST(RC4, decryptTextFromBigFile) {
     //Assert
     ASSERT_EQ(md5Input, md5Output);
 }
-
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 TEST(RC4, encryptBigPictureFile) {
     //Variable init
     string key = "akeyforabigphoto";
     string pathInput = "../data/5_input.jpg";
     string pathOutput = "../data/6_input";
-    int nbThread = 3;
 
     //RC4 work
     FileAccessor fileAccessor(pathInput, pathOutput);
@@ -111,13 +120,13 @@ TEST(RC4, encryptBigPictureFile) {
     //Assert
     ASSERT_NE(md5Input, md5Output);
 }
-
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 TEST(RC4, decryptBigPictureFile) {
     //Variable init
     string key = "akeyforabigphoto";
     string pathInput = "../data/6_input";
     string pathOutput = "../data/6_output.jpg";
-    int nbThread = 3;
 
     //RC4 work
     FileAccessor fileAccessor(pathInput, pathOutput);

@@ -1,11 +1,20 @@
-//
-// Created by olivier on 28/11/18.
-//
+/**
+ * Benchmark methods
+ * benchmark.cpp
+ * Purpose : Getting timing performance of the core program
+ *
+ * @authors Nicolas Cornu, Olivier Lefebvre, Vincent Valvas
+ * @version 0.1
+ * @date 28/11/18
+ */
 
 #include <benchmark/benchmark.h>
 #include "../src/Common/Functions.h"
 #include "../src/FileAccessor/FileAccessor.h"
 #include "../src/ThreadManager/ThreadManager.h"
+
+//How many threads to use on parallel benchmarks
+const int nbThread = 4;
 
 //////////////////////////////////////////////////////////////
 static void encryptTinyTextFileOneThread(benchmark::State& state) {
@@ -40,7 +49,6 @@ static void encryptTinyTextFileParallel(benchmark::State& state) {
     string key = "iamarandomkey";
     string pathInput = "../data/1_input";
     string pathOutput = "../data/2_input";
-    int nbThread = 4;
 
     for (auto _ : state) {
         FileAccessor fileAccessor(pathInput, pathOutput);
@@ -54,8 +62,7 @@ static void decryptTinyTextFileParallel(benchmark::State& state) {
     string key = "iamarandomkey";
     string pathInput = "../data/2_input";
     string pathOutput = "../data/2_output";
-    int nbThread = 4;
-    
+
     for (auto _ : state) {
         FileAccessor fileAccessor(pathInput, pathOutput);
         ThreadManager tm(&fileAccessor, nbThread, key);
@@ -98,8 +105,7 @@ static void encryptBigTextFileParallel(benchmark::State& state) {
     string key = "iamananotherrandomkey";
     string pathInput = "../data/3_input";
     string pathOutput = "../data/4_input";
-    int nbThread = 4;
-    
+
     for (auto _ : state) {
         FileAccessor fileAccessor(pathInput, pathOutput);
         ThreadManager tm(&fileAccessor, nbThread, key);
@@ -112,8 +118,7 @@ static void decryptBigTextFileParallel(benchmark::State& state) {
     string key = "iamananotherrandomkey";
     string pathInput = "../data/4_input";
     string pathOutput = "../data/4_output";
-    int nbThread = 4;
-    
+
     for (auto _ : state) {
         FileAccessor fileAccessor(pathInput, pathOutput);
         ThreadManager tm(&fileAccessor, nbThread, key);
@@ -156,8 +161,7 @@ static void encryptBigBinaryFileParallel(benchmark::State& state) {
     string key = "akeyforabigphoto";
     string pathInput = "../data/5_input.jpg";
     string pathOutput = "../data/6_input";
-    int nbThread = 4;
-    
+
     for (auto _ : state) {
         FileAccessor fileAccessor(pathInput, pathOutput);
         ThreadManager tm(&fileAccessor, nbThread, key);
@@ -170,8 +174,7 @@ static void decryptBigBinaryFileParallel(benchmark::State& state) {
     string key = "akeyforabigphoto";
     string pathInput = "../data/6_input";
     string pathOutput = "../data/6_output.jpg";
-    int nbThread = 4;
-    
+
     for (auto _ : state) {
         FileAccessor fileAccessor(pathInput, pathOutput);
         ThreadManager tm(&fileAccessor, nbThread, key);
@@ -184,10 +187,9 @@ static void decryptBigBinaryFileParallel(benchmark::State& state) {
 //////////////////////////////////////////////////////////////
 static void encrypt1GoBinaryFileParallel(benchmark::State& state) {
     //Variable init
-    string key = "akeyforabigphoto";
+    string key = "akeyforabigzipfile";
     string pathInput = "../data/1GB.zip";
     string pathOutput = "../data/1GB.zip.rc4";
-    int nbThread = 4;
 
     for (auto _ : state) {
         FileAccessor fileAccessor(pathInput, pathOutput);
@@ -198,10 +200,9 @@ static void encrypt1GoBinaryFileParallel(benchmark::State& state) {
 
 static void decrypt1GoBinaryFileParallel(benchmark::State& state) {
     //Variable init
-    string key = "akeyforabigphoto";
+    string key = "akeyforabigzipfile";
     string pathInput = "../data/1GB.zip.rc4";
     string pathOutput = "../data/1GB.zip.rc4.decrypt";
-    int nbThread = 4;
 
     for (auto _ : state) {
         FileAccessor fileAccessor(pathInput, pathOutput);
@@ -235,9 +236,10 @@ BENCHMARK(decryptBigBinaryFileOneThread);
 BENCHMARK(encryptBigBinaryFileParallel);
 BENCHMARK(decryptBigBinaryFileParallel);
 
+//1Gb Binary Parallel benchmark
 BENCHMARK(encrypt1GoBinaryFileParallel);
 BENCHMARK(decrypt1GoBinaryFileParallel);
 //////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
-
+//Launch all the benchmarks
 BENCHMARK_MAIN();

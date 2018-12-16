@@ -30,7 +30,7 @@ set(LIBRC4_SOURCES_FILES ${CMAKE_CURRENT_LIST_DIR}/src/RC4/RC4.h
         ${CMAKE_CURRENT_LIST_DIR}/src/ThreadManager/ThreadManager.h)
 
 
-add_executable(rc4parallel ${SOURCES_FILES})
+add_executable(main ${SOURCES_FILES})
 
 #UNIT TESTS
 enable_testing()

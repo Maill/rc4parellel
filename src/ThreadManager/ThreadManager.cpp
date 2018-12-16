@@ -54,8 +54,7 @@ void ThreadManager::threadWork() {
         if(chunk.second == nullptr)
             return;
 
-        RC4 rc4;
-        rc4 = baseRC4;
+        RC4 rc4 = baseRC4;
         rc4.execute(&chunk);
 
         fileAccessor->writeChunk(chunk);
